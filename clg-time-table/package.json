@@ -1,0 +1,12 @@
+{
+  "name": "clg-time-table",
+  "version": "1.0.0",
+  "description": "Time table generation using genetic algorithm",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

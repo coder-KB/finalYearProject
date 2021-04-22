@@ -1,7 +1,0 @@
-CS410
-CS46L: CS46L: CS46L: CS450:Prof. Sheela N CS410:Prof. Vani Ashok MA410:Prof. Sujatha Raju  :  :  : 
-CS450:Prof. Sheela N CS440:Prof. S Brunda CS420:Prof. Varsha V CS47L: CS47L: CS47L:  :  :  : 
-CS410:Prof. Vani Ashok CS430:Prof. H D Nandeesh CS420:Prof. Varsha V HU410:Prof. Lakshith CS440:Prof. S Brunda  :  :  :  : 
- :  :  : CS450:Prof. Sheela N CS410:Prof. Vani Ashok MA410:Prof. Sujatha Raju CS420:Prof. Varsha V HU410:Prof. Lakshith CS430:Prof. H D Nandeesh 
- :  :  :  :  : CS440:Prof. S Brunda CS450:Prof. Sheela N CS420:Prof. Varsha V MA410:Prof. Sujatha Raju 
-CS430:Prof. H D Nandeesh MA410:Prof. Sujatha Raju CS440:Prof. S Brunda CS410:Prof. Vani Ashok  :  :  :  :  : done

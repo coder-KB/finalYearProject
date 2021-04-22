@@ -1,0 +1,61 @@
+Class,subCode,teacherName,credits,isLab,startSlot
+CS 4th sem A ,HU410,Prof. Lakshith,2,FALSE,
+CS 4th sem A ,MA410,Prof. Sujatha Raju,4,FALSE,
+CS 4th sem A ,CS410,Prof. Vani Ashok,4,FALSE,
+CS 4th sem A ,CS420,Prof. Varsha V,4,FALSE,
+CS 4th sem A ,CS430,Prof. H D Nandeesh,3,FALSE,
+CS 4th sem A ,CS440,Prof. S Brunda,4,FALSE,
+CS 4th sem A ,CS450,Prof. Sheela N,4,FALSE,
+CS 4th sem A ,CS46L,,,TRUE,39
+CS 4th sem A ,CS47L,,,TRUE,45
+CS 4th sem B,HU410,Prof. Lakshith,2,FALSE,
+CS 4th sem B,MA410,Prof. Sujatha Raju,4,FALSE,
+CS 4th sem B,CS410,Dr.A M Chandashekhar,4,FALSE,
+CS 4th sem B,CS420,Dr. R Guru,4,FALSE,
+CS 4th sem B,CS430,Prof. Divakara N,3,FALSE,
+CS 4th sem B,CS440,Prof. ParashivaMurthy B M,4,FALSE,
+CS 4th sem B,CS450,Prof. Vaniashok,4,FALSE,
+CS 4th sem B,CS46L,,,TRUE,0
+CS 4th sem B,CS47L,,,TRUE,12
+CS 4th sem C,HU410,Prof. Lakshith,2,FALSE,
+CS 4th sem C,MA410,Prof. Sujatha Raju,4,FALSE,
+CS 4th sem C,CS410,Dr. Madhusudhan G,4,FALSE,
+CS 4th sem C,CS420,Dr. M A Anusuya,4,FALSE,
+CS 4th sem C,CS430,Dr. Anil Kumar K M,3,FALSE,
+CS 4th sem C,CS440,Dr. Manimala S,4,FALSE,
+CS 4th sem C,CS450,Prof. Sheela N,4,FALSE,
+CS 4th sem C,CS46L,,,TRUE,3
+CS 4th sem C,CS47L,,,TRUE,12
+CS 6th sem A,CS610,Dr. PM Shivamurthy,4,FALSE,
+CS 6th sem A,CS620,Dr. TrisiladeviCNagavi,3,FALSE,
+CS 6th sem A,CS630,Dr. S Manjula,4,FALSE,
+CS 6th sem A,CS640,Dr. B T Prasanna,3,FALSE,
+CS 6th sem A,CS652,Prof. Ashritha R Murthy,4,FALSE,
+CS 6th sem A,CS654,Prof. K C Shalini,4,FALSE,
+CS 6th sem A,CS661,Dr. M P Pushpalatha,2,FALSE,
+CS 6th sem A,CS662,Prof. Shruthi N M ,2,FALSE,
+CS 6th sem A,CS665,Dr. TrisiladeviC Nagavi,2,FALSE,
+CS 6th sem A,CS667L,,,TRUE,18
+CS 6th sem A,CS668L,,,TRUE,48
+CS 6th sem B,CS610,Prof. SwethaShree G C,4,FALSE,
+CS 6th sem B,CS620,Prof. K S Mahesh,3,FALSE,
+CS 6th sem B,CS630,Prof. Varsha V,4,FALSE,
+CS 6th sem B,CS640,Dr. B T Prasanna,3,FALSE,
+CS 6th sem B,CS652,Prof. Ashritha R Murthy,4,FALSE,
+CS 6th sem B,CS654,Prof. M B Vijay,4,FALSE,
+CS 6th sem B,CS661,Dr. M P Pushpalatha,2,FALSE,
+CS 6th sem B,CS662,Prof. Nandeesh,2,FALSE,
+CS 6th sem B,CS665,Dr. TrisiladeviC Nagavi,2,FALSE,
+CS 6th sem B,CS667L,,,TRUE,9
+CS 6th sem B,CS668L,,,TRUE,42
+CS 6th sem C,CS610,Prof. ShwethaShree G C,4,FALSE,
+CS 6th sem C,CS620,Prof. Shruthi N M,3,FALSE,
+CS 6th sem C,CS630,Dr. S Manjula,4,FALSE,
+CS 6th sem C,CS640,Prof. Swetha P M,3,FALSE,
+CS 6th sem C,CS652,Prof. Ashritha R Murthy,4,FALSE,
+CS 6th sem C,CS654,Prof. Rakshith P,4,FALSE,
+CS 6th sem C,CS661,Dr. M P Pushpalatha,2,FALSE,
+CS 6th sem C,CS662,Prof. Shruthi N M ,2,FALSE,
+CS 6th sem C,CS665,Dr. TrisiladeviC Nagavi,2,FALSE,
+CS 6th sem C,CS667L,,,TRUE,24
+CS 6th sem C,CS668L,,,TRUE,33

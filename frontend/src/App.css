@@ -1,3 +1,21 @@
 .App {
   text-align: center;
 }
+
+.Button {
+    margin: 22%;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    padding: 1rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    background-color: lightgreen;
+    text-transform: uppercase;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.Button:hover {
+    background-color: greenyellow;
+    transform: scale(0.98);
+}

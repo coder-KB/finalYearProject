@@ -32,8 +32,8 @@ exports.getSectionsList = async (req, res) => {
 };
 
 exports.getSectionByName = (req, res, next, sectionName) => {
-    Section.findOne({ sectionName }).exec((err, Section) => {
-        if (err || !Section) {
+    Section.findOne({ name: sectionName }).exec((err, section) => {
+        if (err || !section) {
             return res.status(400).json({
                 error: "Section not found in DB",
             });
@@ -48,9 +48,9 @@ exports.getSingleSection = (req, res) => {
 };
 
 exports.updateSection = (req, res) => {
-    const section = req.Section;
-    Section.name = req.body.name;
-    Section.subjects = req.body.subjects;
+    const section = req.section;
+    section.name = req.body.name;
+    section.subjects = req.body.subjects;
 
     section.save((err, updatedSection) => {
         if (err || !updatedSection) {

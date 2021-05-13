@@ -2,6 +2,7 @@ const express = require("express");
 const timetableRoutes = require("./routers/timetable");
 const teacherRoutes = require("./routers/teacher");
 const sectionRoutes = require("./routers/section");
+const userRoutes = require("./routers/user");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const app = express();
@@ -17,12 +18,14 @@ app.get("/", (req, res) => {
 app.use("/timetable", timetableRoutes);
 app.use("/teacher", teacherRoutes);
 app.use("/section", sectionRoutes);
+app.use("/user", userRoutes);
 
 app.listen(port, () => {
     mongoose
         .connect("mongodb://localhost:27017/fyp", {
             useNewUrlParser: true,
             useUnifiedTopology: true,
+            useCreateIndex: true,
         })
         .then((response) => {
             console.log("DB Connected");

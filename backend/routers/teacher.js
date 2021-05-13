@@ -2,16 +2,14 @@ var express = require("express");
 var router = express.Router();
 
 const {
-  test,
-  createTeacher,
-  getTeachersList,
-  getTeacherByInitial,
-  getSingleTeacher,
-  updateTeacher,
-  removeTeacher,
+    test,
+    createTeacher,
+    getTeachersList,
+    getTeacherByInitial,
+    getSingleTeacher,
+    updateTeacher,
+    removeTeacher,
 } = require("../controllers/teacher");
-
-router.get("/", test); // remove this later
 
 router.param("initial", getTeacherByInitial);
 

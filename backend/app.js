@@ -1,6 +1,7 @@
 const express = require("express");
 const timetableRoutes = require("./routers/timetable");
 const teacherRoutes = require("./routers/teacher");
+const sectionRoutes = require("./routers/section");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const app = express();
@@ -15,6 +16,7 @@ app.get("/", (req, res) => {
 
 app.use("/timetable", timetableRoutes);
 app.use("/teacher", teacherRoutes);
+app.use("/section", sectionRoutes);
 
 app.listen(port, () => {
     mongoose

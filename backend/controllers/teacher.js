@@ -23,7 +23,7 @@ exports.getTeachersList = async (req, res) => {
     Teacher.find({}, (err, data) => {
         if (err) {
             res.status(422).json({
-                error: "Error in creation of teacher",
+                error: "Error in retreiving of teachers",
             });
         }
 
@@ -55,7 +55,7 @@ exports.updateTeacher = (req, res) => {
     teacher.save((err, updatedTeacher) => {
         if (err || !updatedTeacher) {
             return res.status(400).json({
-                error: "Not able to update category in DB",
+                error: "Not able to update teacher in DB",
             });
         }
 
@@ -68,7 +68,7 @@ exports.removeTeacher = (req, res) => {
     teacher.remove((err, teacher) => {
         if (err || !teacher) {
             return res.status(400).json({
-                error: "Not able to update category in DB",
+                error: "Not able to remove teacher in DB",
             });
         }
 

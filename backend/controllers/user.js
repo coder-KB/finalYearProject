@@ -5,7 +5,7 @@ exports.signup = (req, res) => {
     user.save((err, user) => {
         if (err || !user) {
             return res.status(400).json({
-                err: "NOT able to save user in db",
+                err: "User Email already exist",
             });
         }
 
@@ -22,13 +22,13 @@ exports.signin = (req, res) => {
     User.findOne({ email }, (err, user) => {
         if (err || !user) {
             return res.status(400).json({
-                error: "User email does not exist",
+                err: "User email does not exist",
             });
         }
 
         if (!user.authenticate(password)) {
             return res.status(401).json({
-                error: "Email and password does not match",
+                err: "Email and password does not match",
             });
         }
 

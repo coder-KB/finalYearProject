@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getTimeTable } from "../api/timetable";
 import SingleClass from "./SingleClass";
-import Loading from "./Loading";
+import Loading from "./Loading/Loading";
 
 const Timetable = () => {
     const [timetable, setTimetable] = useState();

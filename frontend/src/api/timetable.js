@@ -1,5 +1,7 @@
+const { API } = require("../backend");
+
 exports.getTimeTable = () => {
-  return fetch("http://localhost:4000/timetable/")
-    .then((response) => response.json())
-    .catch((err) => console.log(err));
+    return fetch(`${API}/timetable/`)
+        .then((response) => response.json())
+        .catch((err) => console.log(err));
 };

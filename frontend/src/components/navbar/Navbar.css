@@ -1,0 +1,14 @@
+.nav-link {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255 255 255);
+}
+
+.collapse span {
+    color: #ffc107;
+    font-weight: bold;
+    text-transform: capitalize;
+}

@@ -1,8 +1,8 @@
 .App {
-  text-align: center;
+    overflow: hidden;
 }
 
-.Button {
+/* .Button {
     margin: 22%;
     cursor: pointer;
     border: none;
@@ -12,10 +12,8 @@
     font-weight: bold;
     background-color: lightgreen;
     text-transform: uppercase;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .Button:hover {
     background-color: greenyellow;
-    transform: scale(0.98);
-}
+} */

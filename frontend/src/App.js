@@ -1,25 +1,11 @@
-import { useState } from "react";
-import "./App.css";
-import Timetable from "./components/Timetable";
+import Home from "./components/Home";
+// import Timetable from "./components/Timetable";
 
 function App() {
-    const [timetable, setTimetable] = useState(false);
-
     return (
-        <div className="App">
-            {timetable ? (
-                <Timetable />
-            ) : (
-                <button
-                    className="Button"
-                    onClick={() => {
-                        setTimetable(true);
-                    }}
-                >
-                    Generate
-                </button>
-            )}
-        </div>
+        <Home>
+            <h1>Home Page</h1>
+        </Home>
     );
 }
 

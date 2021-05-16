@@ -1,0 +1,57 @@
+.Main {
+    background-color: #848de185;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.Container {
+    margin: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Wrap {
+    background-color: #2c51b9;
+    width: 400px;
+    height: 100%;
+    border-radius: 5%;
+    padding: 10px;
+    box-shadow: 1px 2px 10px 3px #777;
+}
+
+.Wrap a {
+    display: block;
+}
+
+.FormGroup {
+    margin: 14px;
+}
+
+.FormGroup input {
+    margin: 0px;
+    border: 4px solid #749cfd;
+}
+
+.FormGroup input,
+.FormGroup label {
+    border-radius: 0px;
+}
+
+.Input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.Label:read-only {
+    background-color: white;
+    border: none;
+    color: darkblue;
+    font-size: 24px;
+}
+
+.FormGroup button {
+    width: 100%;
+}

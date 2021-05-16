@@ -6,6 +6,7 @@ import Home from "../../Home";
 const UpdateTeacher = ({ match }) => {
     const [name, setName] = useState("");
     const [initial, setInitial] = useState("");
+    const [oldInitial, setOldInitial] = useState("");
     const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
 
@@ -16,6 +17,7 @@ const UpdateTeacher = ({ match }) => {
             } else {
                 setName(data.name);
                 setInitial(data.initial);
+                setOldInitial(data.initial);
             }
         });
     };
@@ -42,7 +44,7 @@ const UpdateTeacher = ({ match }) => {
         setError("");
         setSuccess(false);
 
-        updateTeacher({ name, initial }, initial)
+        updateTeacher({ name, initial }, oldInitial)
             .then((data) => {
                 if (data.error) {
                     setError(data.error);

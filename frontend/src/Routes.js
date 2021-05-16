@@ -10,6 +10,7 @@ import AddSection from "./components/admin/section/AddSection";
 import ManageSection from "./components/admin/section/ManageSections";
 import ManageTeachers from "./components/admin/teacher/ManageTeachers";
 import UpdateTeacher from "./components/admin/teacher/UpdateTeacher";
+import UpdateSection from "./components/admin/section/UpdateSection";
 
 const Routes = () => {
     return (
@@ -47,6 +48,11 @@ const Routes = () => {
                     path="/admin/sections"
                     exact
                     component={ManageSection}
+                />
+                <AdminRoute
+                    path="/admin/section/update/:sectionName"
+                    exact
+                    component={UpdateSection}
                 />
             </Switch>
         </BrowserRouter>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { deleteTeacher, getTeachers } from "../../../api/teacher";
-import { isAuthenticated } from "../../../api/user";
 import Home from "../../Home";
 
 const ManageTeachers = () => {

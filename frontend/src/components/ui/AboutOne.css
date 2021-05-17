@@ -1,0 +1,61 @@
+.Card {
+    border: 1px solid #0d6ef1;
+    width: 350px;
+    height: 185px;
+    margin-bottom: 10px;
+    background-color: #e1e6eb;
+    position: relative;
+    margin-left: 50px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding: 10px;
+    padding-top: 20px;
+    box-shadow: 0px 0px 10px #2c2b3e;
+    border-radius: 10px;
+}
+
+.Card-Header {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.Card-Img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid rgb(13 110 253);
+    position: absolute;
+    top: -80px;
+    left: 32%;
+}
+
+.Card-details {
+    margin-bottom: 10px;
+}
+
+.Interests {
+    width: 100%;
+    display: inline;
+    border: none;
+    background-color: gray;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+
+.Interest {
+    border: none;
+    background-color: #0b28527a;
+    text-align: center;
+    border-radius: 5px;
+    color: tomato;
+    padding: 3px;
+}
+
+.Card-Link {
+    margin-top: 10px;
+}
+
+.Card-Link a {
+    cursor: pointer;
+    margin: 10px;
+}

@@ -55,6 +55,11 @@ const DashBoard = () => {
                             Generate Time Table
                         </Link>
                     </li>
+                    <li className="list-group-item">
+                        <Link to="/timetable" className="nav-link text-success">
+                            View Time Table
+                        </Link>
+                    </li>
                 </ul>
             </div>
         );

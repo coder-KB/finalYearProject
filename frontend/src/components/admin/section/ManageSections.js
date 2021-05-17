@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { deleteSection, getSections } from "../../../api/section";
-import { deleteTeacher, getTeachers } from "../../../api/teacher";
 import Home from "../../Home";
 
 const ManageSections = () => {

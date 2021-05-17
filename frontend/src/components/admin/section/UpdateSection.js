@@ -140,87 +140,107 @@ const UpdateSection = ({ match }) => {
         setSection({ ...section, subjects: updateSubjects });
     };
 
+    const removeSubject = (idx) => {
+        const updateSubjects = [...section.subjects];
+        updateSubjects.splice(idx, 1);
+        console.log(updateSubjects);
+
+        setSection({ ...section, subjects: updateSubjects });
+        setCount(count - 1);
+    };
+
     const getInputs = () => {
         let content = [];
         for (let i = 0; i < count; ++i) {
             content.push(
                 <div className="row" key={i}>
-                    <div className="col-3 FormGroup m-0">
-                        <input
-                            type="text"
-                            value={section.subjects[i].subjectName}
-                            className="Input form-control"
-                            placeholder="Subject Name"
-                            onChange={handleChange(i, "subjectName")}
-                        />
+                    <div className="col-11">
+                        <div className="row">
+                            <div className="col-3 FormGroup m-0">
+                                <input
+                                    type="text"
+                                    value={section.subjects[i].subjectName}
+                                    className="Input form-control"
+                                    placeholder="Subject Name"
+                                    onChange={handleChange(i, "subjectName")}
+                                />
+                            </div>
+                            <div className="col-2 FormGroup m-0">
+                                <input
+                                    type="text"
+                                    value={section.subjects[i].subjectCode}
+                                    onChange={handleChange(i, "subjectCode")}
+                                    className="form-control Input"
+                                    placeholder="Sub Code"
+                                />
+                            </div>
+                            <div className="col-1 FormGroup m-0">
+                                <input
+                                    type="checkbox"
+                                    value={section.subjects[i].isLab}
+                                    checked={section.subjects[i].isLab}
+                                    onChange={handleChange(i, "isLab")}
+                                    className="m-2"
+                                    style={{ height: "20px", width: "20px" }}
+                                />
+                            </div>
+                            <div className="col-2 FormGroup m-0">
+                                <select
+                                    className="form-control Input my-1 mr-sm-2"
+                                    value={
+                                        !section.subjects[i].isLab &&
+                                        section.subjects[i].teacherName
+                                    }
+                                    onChange={handleChange(i, "teacherName")}
+                                    disabled={section.subjects[i].isLab}
+                                >
+                                    <option defaultValue>Choose</option>
+                                    {teachers.map((teacher) => {
+                                        return (
+                                            <option
+                                                value={teacher.initial}
+                                                key={teacher.initial}
+                                            >
+                                                {teacher.initial}
+                                            </option>
+                                        );
+                                    })}
+                                </select>
+                            </div>
+                            <div className="col-2 FormGroup m-0">
+                                <input
+                                    type="number"
+                                    value={
+                                        !section.subjects[i].isLab &&
+                                        section.subjects[i].credits
+                                    }
+                                    onChange={handleChange(i, "credits")}
+                                    className="form-control Input"
+                                    placeholder="Credits"
+                                    disabled={section.subjects[i].isLab}
+                                />
+                            </div>
+                            <div className="col-2 FormGroup m-0">
+                                <input
+                                    type="number"
+                                    value={
+                                        section.subjects[i].isLab &&
+                                        section.subjects[i].startSlot
+                                    }
+                                    onChange={handleChange(i, "startSlot")}
+                                    className="Input form-control"
+                                    placeholder="Start Slot"
+                                    disabled={!section.subjects[i].isLab}
+                                />
+                            </div>
+                        </div>
                     </div>
-                    <div className="col-2 FormGroup m-0">
-                        <input
-                            type="text"
-                            value={section.subjects[i].subjectCode}
-                            onChange={handleChange(i, "subjectCode")}
-                            className="form-control Input"
-                            placeholder="Sub Code"
-                        />
-                    </div>
-                    <div className="col-1 FormGroup m-0">
-                        <input
-                            type="checkbox"
-                            value={section.subjects[i].isLab}
-                            checked={section.subjects[i].isLab}
-                            onChange={handleChange(i, "isLab")}
-                            className="m-2"
-                            style={{ height: "20px", width: "20px" }}
-                        />
-                    </div>
-                    <div className="col-2 FormGroup m-0">
-                        <select
-                            className="form-control Input my-1 mr-sm-2"
-                            value={
-                                !section.subjects[i].isLab &&
-                                section.subjects[i].teacherName
-                            }
-                            onChange={handleChange(i, "teacherName")}
-                            disabled={section.subjects[i].isLab}
-                        >
-                            <option defaultValue>Choose</option>
-                            {teachers.map((teacher) => {
-                                return (
-                                    <option
-                                        value={teacher.initial}
-                                        key={teacher.initial}
-                                    >
-                                        {teacher.initial}
-                                    </option>
-                                );
-                            })}
-                        </select>
-                    </div>
-                    <div className="col-2 FormGroup m-0">
-                        <input
-                            type="number"
-                            value={
-                                !section.subjects[i].isLab &&
-                                section.subjects[i].credits
-                            }
-                            onChange={handleChange(i, "credits")}
-                            className="form-control Input"
-                            placeholder="Credits"
-                            disabled={section.subjects[i].isLab}
-                        />
-                    </div>
-                    <div className="col-2 FormGroup m-0">
-                        <input
-                            type="number"
-                            value={
-                                section.subjects[i].isLab &&
-                                section.subjects[i].startSlot
-                            }
-                            onChange={handleChange(i, "startSlot")}
-                            className="Input form-control"
-                            placeholder="Start Slot"
-                            disabled={!section.subjects[i].isLab}
-                        />
+                    <div className="col-1">
+                        <i
+                            className="fas fa-minus-circle fa-2x"
+                            style={{ cursor: "pointer", marginTop: "5px" }}
+                            onClick={() => removeSubject(i)}
+                        ></i>
                     </div>
                 </div>
             );
@@ -254,23 +274,29 @@ const UpdateSection = ({ match }) => {
 
                 <div className="container border border-primary pb-2">
                     <div className="row">
-                        <div className="col-3">
-                            <label className="Label">Subject Name</label>
-                        </div>
-                        <div className="col-2">
-                            <label className="Label">Sub Code</label>
-                        </div>
-                        <div className="col-1">
-                            <label className="Label">isLab</label>
-                        </div>
-                        <div className="col-2">
-                            <label className="Label">Teacher</label>
-                        </div>
-                        <div className="col-2">
-                            <label className="Label">Credits</label>
-                        </div>
-                        <div className="col-2">
-                            <label className="Label">Start Slot</label>
+                        <div className="col-11">
+                            <div className="row">
+                                <div className="col-3">
+                                    <label className="Label">
+                                        Subject Name
+                                    </label>
+                                </div>
+                                <div className="col-2">
+                                    <label className="Label">Sub Code</label>
+                                </div>
+                                <div className="col-1">
+                                    <label className="Label">isLab</label>
+                                </div>
+                                <div className="col-2">
+                                    <label className="Label">Teacher</label>
+                                </div>
+                                <div className="col-2">
+                                    <label className="Label">Credits</label>
+                                </div>
+                                <div className="col-2">
+                                    <label className="Label">Start Slot</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

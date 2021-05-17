@@ -11,6 +11,10 @@ import ManageSection from "./components/admin/section/ManageSections";
 import ManageTeachers from "./components/admin/teacher/ManageTeachers";
 import UpdateTeacher from "./components/admin/teacher/UpdateTeacher";
 import UpdateSection from "./components/admin/section/UpdateSection";
+import Timetable from "./components/Timetable";
+import PrivateRoute from "./auth/helper/PrivateRoute";
+import Generate from "./components/admin/Generate";
+import About from "./components/ui/About";
 
 const Routes = () => {
     return (
@@ -19,6 +23,7 @@ const Routes = () => {
                 <Route path="/" exact component={App} />
                 <Route path="/signup" exact component={SignUp} />
                 <Route path="/signin" exact component={SignIn} />
+                <Route path="/about" exact component={About} />
                 <AdminRoute
                     path="/admin/dashboard"
                     exact
@@ -54,6 +59,12 @@ const Routes = () => {
                     exact
                     component={UpdateSection}
                 />
+                <AdminRoute
+                    path="/admin/timetable"
+                    exact
+                    component={Generate}
+                />
+                <PrivateRoute path="/timetable" exact component={Timetable} />
             </Switch>
         </BrowserRouter>
     );

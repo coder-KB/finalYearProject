@@ -78,18 +78,9 @@ const Navbar = ({ history }) => {
                             <Link
                                 style={currentTab(history, "/about")}
                                 className="nav-link mx-3"
-                                to="/"
+                                to="/about"
                             >
                                 About Us
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                style={currentTab(history, "/contact")}
-                                className="nav-link mx-3"
-                                to="/"
-                            >
-                                Contact Us
                             </Link>
                         </li>
                     </ul>

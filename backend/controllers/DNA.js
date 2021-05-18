@@ -10,7 +10,7 @@ class DNA {
         DNA.target.forEach((d) => {
             let res = null;
             while (res == null) {
-                res = generateSingleTimeTable(d.subjects);
+                res = generateSingleTimeTable(d.subjects, d.name);
             }
             this.genes.push(res);
         });

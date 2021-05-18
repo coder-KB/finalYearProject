@@ -22,13 +22,19 @@ app.use("/user", userRoutes);
 
 app.listen(port, () => {
     mongoose
-        .connect("mongodb://localhost:27017/fyp", {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true,
-        })
+        .connect(
+            "mongodb+srv://admin:admin@timetable.bd4nq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+            {
+                useNewUrlParser: true,
+                useUnifiedTopology: true,
+                useCreateIndex: true,
+            }
+        )
         .then((response) => {
             console.log("DB Connected");
+        })
+        .catch((err) => {
+            console.log(err);
         });
     console.log(`backend listening at http://localhost:${port}`);
 });

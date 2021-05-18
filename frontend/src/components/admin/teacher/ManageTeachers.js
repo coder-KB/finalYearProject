@@ -50,7 +50,7 @@ const ManageTeachers = () => {
                                     key={index}
                                 >
                                     <div className="col-4">
-                                        <h3 className="text-white text-left">
+                                        <h3 className="text-white text-left text-nowrap">
                                             {teacher.name}
                                         </h3>
                                     </div>

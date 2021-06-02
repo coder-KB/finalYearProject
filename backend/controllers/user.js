@@ -1,20 +1,35 @@
 const User = require("../models/user");
+const Teacher = require("../models/Teacher");
+
+const checkTeacher = (user) => {
+    let exist = true;
+    Teacher.findOne({ initial: user.name }).exec((err, teacher) => {
+        if (err || !teacher) {
+            exist = false;
+        } else {
+            user.role = 2;
+        }
+    });
+};
 
 exports.signup = (req, res) => {
     const user = new User(req.body);
-    user.save((err, user) => {
-        if (err || !user) {
-            return res.status(400).json({
-                err: "User Email already exist",
-            });
-        }
+    checkTeacher(user);
+    setTimeout(() => {
+        user.save((err, user) => {
+            if (err || !user) {
+                return res.status(400).json({
+                    err: "User Email already exist",
+                });
+            }
 
-        res.json({
-            name: user.name,
-            email: user.email,
-            role: user.role,
+            res.json({
+                name: user.name,
+                email: user.email,
+                role: user.role,
+            });
         });
-    });
+    }, 1000);
 };
 
 exports.signin = (req, res) => {

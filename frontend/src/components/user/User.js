@@ -9,7 +9,7 @@ const User = ({ name }) => {
         >
             <hr></hr>
             <h3>
-                Hello <span class="text-capitalize">{name}</span>
+                Hello <span className="text-capitalize">{name}</span>
             </h3>
             <br></br>
             <p className="lead">
@@ -31,7 +31,7 @@ const User = ({ name }) => {
 
             <p>
                 Thank you for visiting our website{" "}
-                <i class="fas fa-praying-hands"></i>.
+                <i className="fas fa-praying-hands"></i>.
             </p>
             <hr></hr>
         </div>

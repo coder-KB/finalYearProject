@@ -15,6 +15,8 @@ import Timetable from "./components/Timetable";
 import PrivateRoute from "./auth/helper/PrivateRoute";
 import Generate from "./components/admin/Generate";
 import About from "./components/ui/About";
+import TeacherRoute from "./auth/helper/TeacherRoute";
+import Attendance from "./components/admin/Attendance";
 
 const Routes = () => {
     return (
@@ -65,6 +67,11 @@ const Routes = () => {
                     component={Generate}
                 />
                 <PrivateRoute path="/timetable" exact component={Timetable} />
+                <TeacherRoute
+                    path="/timetable/attendance"
+                    exact
+                    component={Attendance}
+                />
             </Switch>
         </BrowserRouter>
     );

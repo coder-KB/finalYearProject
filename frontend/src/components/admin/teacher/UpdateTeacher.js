@@ -24,7 +24,7 @@ const UpdateTeacher = ({ match }) => {
 
     useEffect(() => {
         preload(match.params.teacherInitial);
-    }, []);
+    }, [match]);
 
     const goBack = () => {
         return (

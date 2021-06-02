@@ -25,33 +25,31 @@ const UpdateSection = ({ match }) => {
     });
     const [oldName, setOldName] = useState("");
 
-    const preload = (sectionName) => {
-        getSection(sectionName).then((data) => {
-            if (data.error) {
-                console.log(data.error);
-            } else {
-                setSection({
-                    ...section,
-                    name: data.name,
-                    subjects: data.subjects,
-                });
-                setOldName(data.name);
-                setCount(data.subjects.length);
-            }
-        });
-
-        getTeachers().then((data) => {
-            if (data.error) {
-                console.log(data.error);
-            } else {
-                setTeachers(data);
-            }
-        });
-    };
-
     useEffect(() => {
+        const preload = (sectionName) => {
+            getSection(sectionName).then((data) => {
+                if (data.error) {
+                    console.log(data.error);
+                } else {
+                    setSection({
+                        name: data.name,
+                        subjects: data.subjects,
+                    });
+                    setOldName(data.name);
+                    setCount(data.subjects.length);
+                }
+            });
+
+            getTeachers().then((data) => {
+                if (data.error) {
+                    console.log(data.error);
+                } else {
+                    setTeachers(data);
+                }
+            });
+        };
         preload(match.params.sectionName);
-    }, []);
+    }, [match]);
 
     const goBack = () => {
         return (

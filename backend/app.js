@@ -8,6 +8,8 @@ const mongoose = require("mongoose");
 const app = express();
 const port = 4000;
 
+require("dotenv").config();
+
 app.use(express.json());
 app.use(cors({ origin: "*" }));
 
@@ -22,14 +24,11 @@ app.use("/user", userRoutes);
 
 app.listen(port, () => {
     mongoose
-        .connect(
-            "mongodb+srv://admin:admin@timetable.bd4nq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-            {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-                useCreateIndex: true,
-            }
-        )
+        .connect(process.env.MONGO_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true,
+        })
         .then((response) => {
             console.log("DB Connected");
         })

@@ -6,8 +6,8 @@ import "./SignInUp.css";
 
 const SignIn = () => {
     const [userDetails, setUserDetails] = useState({
-        email: "coderkb@gmail.com",
-        password: "12345",
+        email: "",
+        password: "",
         didRedirect: false,
         error: "",
     });

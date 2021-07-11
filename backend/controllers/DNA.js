@@ -45,6 +45,51 @@ class DNA {
 
         // console.log(this.score, DNA.maxScore);
         this.fitness = parseFloat(this.score) / DNA.maxScore;
+
+        if(this.score != DNA.maxScore){
+            this.fitness = 0.3; 
+            
+        }
+        else{
+            //check resources 
+          
+            let mp = new Map();
+           
+            for(var i= 0; i<DNA.target.length; i++){
+               let class_name= DNA.target[i].name.substring(0,3);
+               if(!mp.has(class_name)){
+                   mp.set(class_name, new Array());
+               }
+               mp.get(class_name).push(this.genes[i]);
+            
+            }
+            let mx =DNA.maxScore;
+            mp.forEach((value)=>{
+                    mx+=54;
+
+                for (let t = 0; t < 54; ++t) {
+
+                    let st = new Set();
+                    let ok = 0;
+
+                    value.forEach((cls) => {
+                        const teacher = cls[t][1];
+                        if (teacher) {
+                           ok++;
+                        }
+                    });
+        
+                    if (ok<3) {
+                        this.score++;
+                    }
+                }
+                    
+            })
+
+            this.fitness = parseFloat(this.score) /mx;
+ 
+        }
+
     }
 
     crossover(partner) {

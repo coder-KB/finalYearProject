@@ -18,7 +18,7 @@ async function generateWholeTimeTable(req, res) {
     DNA.setTarget(data);
 
     let populations = [];
-    const populationLength = 15;
+    const populationLength = 25;
 
     for (let i = 0; i < populationLength; ++i) {
         let population = new DNA();
@@ -26,7 +26,7 @@ async function generateWholeTimeTable(req, res) {
     }
 
     let iteration = 1;
-    const maxIterations = 100;
+    const maxIterations = 50;
     while (iteration < maxIterations) {
         for (let i = 0; i < populationLength; ++i) {
             populations[i].calcFitness();
